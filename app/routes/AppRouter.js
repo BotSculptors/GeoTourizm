@@ -9,6 +9,11 @@ import { Footer } from '../components/Common/Footer'
 import { ConnectedRouter } from 'react-router-redux'
 
 import Home from '../components/Pages/Home'
+import Blog from '../components/Pages/Blog'
+import Reviews from '../components/Pages/Reviews'
+import About from '../components/Pages/About'
+
+import Tour from '../components/Tours/Tour'
 
 import createBrowserHistory from 'history/createBrowserHistory';
 export const history = createBrowserHistory();
@@ -32,11 +37,23 @@ export class AppRouter extends React.Component{
                     <div id="main">
                         <Header />
 
-                        <Switch>
-                            <Route exact path='/' render={() => <Home />} />
+                        <main>
 
-                            <Redirect to='/' />
-                        </Switch>
+                            <div className="mainIn">
+                                <Switch>
+                                    <Route exact path='/' render={() => <Home />} />
+                                    <Route exact path='/blog' render={() => <Blog />} />
+                                    <Route exact path='/tours/:tourID' render={(props) => <Tour props={props} />} />
+                                    <Route exact path='/reviews' render={() => <Reviews />} />
+                                    <Route exact path='/about' render={() => <About />} />
+
+                                    <Redirect to='/' />
+                                </Switch>
+                            </div>
+
+
+                        </main>
+
 
                         <Footer />
 

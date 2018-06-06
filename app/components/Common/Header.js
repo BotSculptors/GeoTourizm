@@ -7,7 +7,6 @@ import logo from '../../static/images/logo.png'
 
 
 
-
 export class Header extends React.Component{
 
     constructor(props){
@@ -15,8 +14,6 @@ export class Header extends React.Component{
     }
 
     render(){
-
-
 
         return (
 
@@ -29,24 +26,19 @@ export class Header extends React.Component{
                         <img src={logo} alt="Kuksin Tours" />
 
                     </NavLink>
-
-
                     <nav className="navBlock">
 
                         <NavLink to="/reviews">Reviews</NavLink>
-                        <NavLink to="/link">Link</NavLink>
-                        <NavLink to="/info">Info</NavLink>
+                        <NavLink to="/blog">Blog</NavLink>
                         <NavLink to="/about">About</NavLink>
 
                     </nav>
-
                     <button className="contactUs">Contact Us</button>
 
                 </div>
 
 
             </header>
-
 
         );
     }

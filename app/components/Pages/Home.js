@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { findBotUsers } from '../../actions/actions'
+import { Link } from 'react-router-dom'
 
 
 export class Home extends React.Component {
@@ -16,16 +16,31 @@ export class Home extends React.Component {
 
 
         return (
-            <main>
+            <div>
 
-                <div className="mainIn">
-                    <div className="titleSection">
-                        <h1>5 most popular tours</h1>
-                    </div>
+                <div className="titleSection">
+                    <h1>5 most popular tours</h1>
                 </div>
 
+                <br/>
 
-            </main>
+
+
+                    {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((tourID, i) => (
+
+                        <Link key={i} to={`/tours/${tourID}`}>{tourID}</Link>
+                    ))}
+
+
+
+
+
+
+
+            </div>
+
+
+
         );
     }
 
