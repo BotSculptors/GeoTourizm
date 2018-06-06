@@ -1,0 +1,164 @@
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: MainFontText;
+}
+
+html, body{
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* MainFontBold */
+@font-face {
+  font-family: MainFontBold;
+  src: url("../static/fonts/MainFontBold.ttf");
+}
+
+/* MainFontMedium */
+@font-face {
+  font-family: MainFontMedium;
+  src: url("../static/fonts/MainFontMedium.ttf");
+}
+
+/* MainFontSemibold */
+@font-face {
+  font-family: MainFontSemibold;
+  src: url("../static/fonts/MainFontSemibold.ttf");
+}
+
+/* MainFontText */
+@font-face {
+  font-family: MainFontText;
+  src: url("../static/fonts/MainFontText.ttf");
+}
+
+/* MainFontThin */
+@font-face {
+  font-family: MainFontThin;
+  src: url("../static/fonts/MainFontThin.ttf");
+}
+
+/* MainFontUltralight */
+@font-face {
+  font-family: MainFontUltralight;
+  src: url("../static/fonts/MainFontUltralight.ttf");
+}
+
+$border1: 1px solid white;
+$border2: 1px solid blue;
+$border2: 1px solid red;
+
+$color1: #333;
+
+header{
+
+  border: $border1;
+  display: flex;
+  justify-content: center;
+  background: $color1;
+
+  .headerIn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    border: $border2;
+
+
+    .logo{
+
+      img{
+
+      }
+
+    }
+
+    .navBlock{
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-grow: 1;
+
+      a{
+        color: #fff;
+        font-family: MainFontThin;
+        font-size: 11.5pt;
+        font-weight: lighter;
+      }
+    }
+
+
+    .contactUs{
+      height: 30px;
+      color: #fff;
+      font-family: MainFontThin;
+      background-image: linear-gradient(to bottom,#5cb85c 0,#419641 100%);
+      background-repeat: repeat-x;
+      border-color: #3e8f3e;
+
+    }
+
+    .contactUs:hover{
+      background-color: #419641;
+      background-position: 0 -15px;
+      cursor:pointer;
+    }
+
+
+
+
+
+  }
+
+
+}
+
+
+footer{
+
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  color: #999;
+
+  .footerIn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+
+
+}
+
+
+
+main{
+  display: flex;
+  justify-content: center;
+
+
+  .mainIn{
+    width: 90%;
+
+    .titleSection{
+
+      h1{
+
+        font-size: 20pt;
+        float: left;
+        font-weight: lighter;
+        color: #333;
+        text-shadow: 1px 1px 3px rgba(150, 150, 150, 0.24);
+        font-family: MainFontThin;
+
+      }
+    }
+  }
+
+
+}
