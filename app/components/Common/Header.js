@@ -37,14 +37,12 @@ export class Header extends React.Component {
           </NavLink>
 
         </div>
-        <div className="select_value">
-          <h2>Отображать валюту в :
-          </h2>
-          <select>
-            <option value="dollar">$</option>
-            <option value="evro">€</option>
-            <option value="rub">₽</option>
-          </select>
+        <div id="mainselection" className="select_value">
+        <select>
+          <option value="dollar">$</option>
+          <option value="evro">€</option>
+          <option value="rub">₽</option>
+        </select>
         </div>
         <div className="search">
           <img src={search}></img>
