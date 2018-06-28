@@ -1,52 +1,37 @@
-import React from 'react'
+import React,{Component} from 'react'
+import {bindActionCreators} from "redux"
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-
 export class Home extends React.Component {
-
+  showList (){
+    return this.props.tours.map((tour) =>{
+      return(
+          <Link key={tour.id} to={`/tours/${tour.tour_name}`}><h1>{tour.tour_name}</h1></Link>
+      )
+    })
+  }
     constructor(props) {
         super(props);
     }
-
-
-
-
     render() {
-
-
         return (
             <div>
-
                 <div className="titleSection">
                     <h1>5 most popular tours</h1>
                 </div>
-
                 <br/>
-
-
-
-                    {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((tourID, i) => (
-
-                        <Link key={i} to={`/tours/${tourID}`}>{tourID}</Link>
-                    ))}
-
-
-
-
-
-
-
+                    {this.showList()}
             </div>
-
-
-
         );
     }
 
-
-
+}
+function mapStateToProps(state) {
+  return{
+    tours: state.tours
+  };
 }
 
 
-export default connect(null)(Home);
+export default connect(mapStateToProps)(Home);

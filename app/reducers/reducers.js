@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import ToursReducers from './tour_info'
 import { LOCATION_CHANGE, routerReducer, routerMiddleware } from 'react-router-redux'
 
 function botUsersReducer(state=[], action){
@@ -38,6 +39,7 @@ function botUsersReducer(state=[], action){
 
 
 const rootReducer = combineReducers({
+    tours: ToursReducers,
     botUsersReducer,
     routing: routerReducer
 });

@@ -1,36 +1,39 @@
-import React from 'react'
+import React,{Component} from 'react'
+import {bindActionCreators} from "redux"
 import { connect } from 'react-redux'
-import { findBotUsers } from '../../actions/actions'
-
+import { Link } from 'react-router-dom'
 
 export class Tour extends React.Component {
+  showList (){
+    return this.props.tours.map((tour) =>{
+      return(
+      <div key={tour.id}>
+        <div className="titleSection">
+          <h1>{tour.tour_name}</h1>
+        </div>
+          <h3>{tour.tour_description}</h3>
+      </div>
 
+      )
+    })
+  }
     constructor(props) {
         super(props);
-        console.log(props.props.match.params.tourID)
     }
-
-
-
-
     render() {
-
-
         return (
-
-            <div className="titleSection">
-                <h1>Tour #{this.props.props.match.params.tourID}</h1>
+            <div>
+                    {this.showList()}
             </div>
-
-
-
-
         );
     }
 
-
-
+}
+function mapStateToProps(state) {
+  return{
+    tours: state.tours
+  };
 }
 
 
-export default connect(null)(Tour);
+export default connect(mapStateToProps)(Tour);

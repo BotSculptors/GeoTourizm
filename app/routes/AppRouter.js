@@ -20,18 +20,12 @@ import Tour from '../components/Tours/Tour'
 import createBrowserHistory from 'history/createBrowserHistory';
 export const history = createBrowserHistory();
 
-
-
 export class AppRouter extends React.Component{
 
     constructor(props){
         super(props);
     }
-
-
-
     render(){
-
         return (
             <Provider store={this.props.store}>
 
@@ -51,7 +45,6 @@ export class AppRouter extends React.Component{
                                     <Route exact path='/about' render={() => <About />} />
                                     <Route exact path='/tour-pick' render={() => <Tour_Pick />} />
                                     <Route exact path='/forturist' render={() => <ForTurist />} />
-
                                     <Redirect to='/' />
                                 </Switch>
                             </div>
@@ -73,11 +66,7 @@ export class AppRouter extends React.Component{
 
 const mapStateToProps = (state, ownProps) => {
 
-
-
     return Object.assign({}, ownProps);
-
-
 
 };
 

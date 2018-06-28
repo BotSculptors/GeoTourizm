@@ -5,8 +5,6 @@ import { createStore, applyMiddleware } from 'redux'
 import { createLogger } from 'redux-logger'
 import promise from 'redux-promise-middleware'
 import { routerMiddleware } from 'react-router-redux'
-
-
 import rootReducer from './reducers/reducers'
 import AppRouter, {history} from './routes/AppRouter'
 
@@ -14,7 +12,7 @@ import AppRouter, {history} from './routes/AppRouter'
 const middlware = applyMiddleware( promise(), thunk,createLogger(), routerMiddleware(history) );
 
 // Reducers
-export const store = createStore(rootReducer, middlware);
+const store = createStore(rootReducer, middlware);
 
 
 ReactDOM.render(<AppRouter store={store} />, document.getElementById('app'));
