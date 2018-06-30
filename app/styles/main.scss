@@ -17,6 +17,7 @@ html {
 }
 
 body {
+   overflow:hidden;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -140,14 +141,169 @@ a {
     display: none;
   }
 }
+
+.titleSection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//Tabs
+.tabs_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.react-tabs {
+  outline:none;
+  text-align: center;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #42a1f4;
+  border-radius: 5px 5px 0 0;
+  &__tab-list {
+    border-bottom: 1px solid #fff;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+
+  &__tab {
+    outline:none;
+    width: 50%;
+    display: inline-block;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #42a1f4;
+    color: white;
+
+
+    &--selected {
+      background: #fff;
+      color: #42a1f4;
+      border-radius: 5px 5px 0 0;
+    }
+
+    &--disabled {
+      cursor: default;
+
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px hsl(208, 99%, 50%);
+      border-color: hsl(208, 99%, 50%);
+      outline: none;
+
+      &:after {
+
+        content: "";
+        position: absolute;
+        height: 5px;
+        left: -4px;
+        right: -4px;
+        bottom: -5px;
+        background: #fff;
+      }
+    }
+  }
+
+  &__tab-panel {
+    display: none;
+
+    &--selected {
+      display: block;
+    }
+  }
+}
+//table
+.table_main{
+  display: flex;
+  justify-content: center;
+}
+.info_table{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #42a1f4;
+  border-collapse: collapse;
+  width: 50%;
+  height: 120px;
+  th{
+    text-align: left;
+    color: #29695d;
+    font-size: 1em;
+    span{
+      color: black
+    }
+  }
+}
+
+.bokmark{
+  color: #fff;
+  font-size: 1.4em;
+  margin-top: 15px;
+  width: 30%;
+  height: 50px;
+  background-color:#42a1f4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0px 25px 25px 0px;
+  a{
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 30px 30px 0px;
+
+    border-right: 2px solid #438ac8;
+  }
+}
+.bokmark_select{
+  width: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bokmark_home{
+  width: 20% !important;
+}
+.main_tour_pick{
+
+  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  img{
+    width: 90%;
+    height:90%;
+  }
+  div{
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 1100px) {
   .tour_pick {
     display: none;
+  }
+  .bokmark{
+    font-size: 1.2em;
   }
 }
 @media screen and (max-width: 880px) {
   .name {
     justify-content: center;
+  }
+  .bokmark{
+    font-size: 0.9em;
   }
 
   .navbar {
@@ -169,6 +325,9 @@ a {
   }
 }
 @media screen and (max-width: 400px) {
+  .bokmark{
+    font-size: 0.7em;
+  }
   .navbar {
     font-size: 0.5em;
   }

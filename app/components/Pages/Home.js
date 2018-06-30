@@ -3,6 +3,7 @@ import {bindActionCreators} from "redux"
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
+
 export class Home extends React.Component {
   showList (){
     return this.props.tours.map((tour) =>{
@@ -17,6 +18,7 @@ export class Home extends React.Component {
     render() {
         return (
             <div>
+
                 <div className="titleSection">
                     <h1>5 most popular tours</h1>
                 </div>
