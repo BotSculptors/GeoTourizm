@@ -5,13 +5,16 @@ import { Link } from 'react-router-dom'
 
 
 export class Home extends React.Component {
-  showList (){
-    return this.props.tours.map((tour) =>{
-      return(
-          <Link key={tour.id} to={`/tours/${tour.tour_name}`}><h1>{tour.tour_name}</h1></Link>
-      )
-    })
-  }
+
+
+  // showList (){
+  //   return this.props.tours.map((tour) =>{
+  //     return(
+  //         <Link key={tour.id} to={`/tours/${tour.tour_name}`}><h1>{tour.tour_name}</h1></Link>
+  //     )
+  //   })
+  // }
+
     constructor(props) {
         super(props);
     }
@@ -23,7 +26,6 @@ export class Home extends React.Component {
                     <h1>5 most popular tours</h1>
                 </div>
                 <br/>
-                    {this.showList()}
             </div>
         );
     }
@@ -31,7 +33,7 @@ export class Home extends React.Component {
 }
 function mapStateToProps(state) {
   return{
-    tours: state.tours
+      //tours: state.tours
   };
 }
 

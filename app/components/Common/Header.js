@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {NavLink} from 'react-router-dom'
 import search from '../../static/images/search.png'
-import earth from '../../static/images/earth.png'
+
 import logo from '../../static/images/logo.png'
 
 export class Header extends React.Component {
@@ -20,18 +20,19 @@ export class Header extends React.Component {
         </NavLink>
 
         <div className="navigation">
-          <NavLink className="turist" to="/forturist">
-            <h2>Туристу</h2>
+
+          <NavLink className="blog" to="/trips">
+            Туры
           </NavLink>
-          <NavLink className="blog" to="/blog">
-            <h2>Блог</h2>
-          </NavLink>
+
           <NavLink className="contakti" to="/contact">
             <h2>Контакты</h2>
           </NavLink>
+
           <NavLink className="otzivi" to="/reviews">
             <h2>Отзывы</h2>
           </NavLink>
+
           <NavLink className="oproekte" to="/about">
             <h2>О проекте</h2>
           </NavLink>
@@ -49,8 +50,7 @@ export class Header extends React.Component {
           <input placeholder="Искать тур"></input>
         </div>
         <NavLink className="tour_pick" to="/tour-pick">
-          <img src={earth}></img>
-          <p>Подобрать тур</p>
+          <p>Купить</p>
         </NavLink>
       </div>
     </header>);

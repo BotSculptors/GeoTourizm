@@ -9,13 +9,11 @@ import { Footer } from '../components/Common/Footer'
 import { ConnectedRouter } from 'react-router-redux'
 
 import Home from '../components/Pages/Home'
-import Blog from '../components/Pages/Blog'
 import Contact from '../components/Pages/Contact'
 import Reviews from '../components/Pages/Reviews'
 import About from '../components/Pages/About'
-import Tour_Pick from '../components/Pages/Tour-Pick'
-import ForTurist from '../components/Pages/ForTurist'
-import Tour from '../components/Tours/Tour'
+import Trip from '../components/Trips/Trip'
+import Trips from '../components/Trips/Trips'
 
 import createBrowserHistory from 'history/createBrowserHistory';
 export const history = createBrowserHistory();
@@ -38,13 +36,14 @@ export class AppRouter extends React.Component{
                             <div className="mainIn">
                                 <Switch>
                                     <Route exact path='/' render={() => <Home />} />
-                                    <Route exact path='/blog' render={() => <Blog />} />
-                                    <Route exact path='/tours/:tourID' render={(props) => <Tour props={props} />} />
+
+                                    <Route exact path='/trips' render={(props) => <Trips props={props} />} />
+                                    <Route exact path='/trips/:tripID' render={(props) => <Trip match={props.match} />} />
+
                                     <Route exact path='/reviews' render={() => <Reviews />} />
                                     <Route exact path='/contact' render={() => <Contact />} />
                                     <Route exact path='/about' render={() => <About />} />
-                                    <Route exact path='/tour-pick' render={() => <Tour_Pick />} />
-                                    <Route exact path='/forturist' render={() => <ForTurist />} />
+
                                     <Redirect to='/' />
                                 </Switch>
                             </div>

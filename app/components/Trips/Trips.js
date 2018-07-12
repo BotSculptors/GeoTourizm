@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { findBotUsers } from '../../actions/actions'
 
 
-export class Blog extends React.Component {
+export class Trips extends React.Component {
 
     constructor(props) {
         super(props);
@@ -13,13 +13,11 @@ export class Blog extends React.Component {
 
     render() {
 
-
         return (
 
             <div className="titleSection">
-                <h1>Blog</h1>
+                <h1>Trips</h1>
             </div>
-
 
         );
     }
@@ -29,4 +27,4 @@ export class Blog extends React.Component {
 }
 
 
-export default connect(null)(Blog);
+export default connect(null)(Trips);
