@@ -32,7 +32,10 @@ export class Trip extends React.Component {
     render() {
 
         return (
-            <div>{JSON.stringify(this.state)}</div>
+            <div>
+                {JSON.stringify(this.state)}
+            </div>
+
         );
     }
 

@@ -1,9 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {NavLink} from 'react-router-dom'
-import search from '../../static/images/search.png'
+
+import Favicon from 'react-favicon'
+
+
 
 import logo from '../../static/images/logo.png'
+import favicon from '../../static/images/favicon.png'
 
 export class Header extends React.Component {
 
@@ -14,9 +18,13 @@ export class Header extends React.Component {
   render() {
 
     return (<header>
+
+        <Favicon url={favicon} />
+
+
       <div className="navbar">
         <NavLink className="name" to="/">
-          <h1>ГеоТуризм</h1>
+            <img src={logo} alt="Geo Tourizm Logo"/>
         </NavLink>
 
         <div className="navigation">
@@ -25,16 +33,13 @@ export class Header extends React.Component {
             Туры
           </NavLink>
 
-          <NavLink className="contakti" to="/contact">
-            <h2>Контакты</h2>
-          </NavLink>
 
           <NavLink className="otzivi" to="/reviews">
-            <h2>Отзывы</h2>
+            Отзывы
           </NavLink>
 
           <NavLink className="oproekte" to="/about">
-            <h2>О проекте</h2>
+            О проекте
           </NavLink>
 
         </div>
@@ -46,7 +51,6 @@ export class Header extends React.Component {
         </select>
         </div>
         <div className="search">
-          <img src={search}></img>
           <input placeholder="Искать тур"></input>
         </div>
         <NavLink className="tour_pick" to="/tour-pick">
