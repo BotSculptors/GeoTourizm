@@ -37,7 +37,7 @@ export class AppRouter extends React.Component{
                                 <Switch>
                                     <Route exact path='/' render={() => <Home />} />
 
-                                    <Route exact path='/trips' render={(props) => <Trips props={props} />} />
+                                    <Route exact path='/trips' render={(props) => <Trips match={props.match} />} />
                                     <Route exact path='/trips/:tripID' render={(props) => <Trip match={props.match} />} />
 
                                     <Route exact path='/reviews' render={() => <Reviews />} />

@@ -18,5 +18,12 @@ export function fetchTrip(url) {
 
 
 
+export function fetchAllTrips() {
 
+    return {
+        type: 'GET_ALL_TRIPS',
+        payload: axios.get( `${baseURLLocal}/trips` )
+    }
+
+}
 

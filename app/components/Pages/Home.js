@@ -23,7 +23,7 @@ export class Home extends React.Component {
             <div>
 
                 <div className="titleSection">
-                    <h1>5 most popular tours</h1>
+                    <h1>5 most popular trips</h1>
                 </div>
                 <br/>
             </div>

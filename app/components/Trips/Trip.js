@@ -42,6 +42,7 @@ export class Trip extends React.Component {
 }
 
 
+
 const mapStateToProps = (state, ownProps) => {
     return Object.assign({}, ownProps, {trip: state.tripReducer});
 };

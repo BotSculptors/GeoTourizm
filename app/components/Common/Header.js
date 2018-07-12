@@ -22,8 +22,8 @@ export class Header extends React.Component {
         <Favicon url={favicon} />
 
 
-      <div className="navbar">
-        <NavLink className="name" to="/">
+      <div className="headerIn">
+        <NavLink className="logo" to="/">
             <img src={logo} alt="Geo Tourizm Logo"/>
         </NavLink>
 
@@ -43,18 +43,24 @@ export class Header extends React.Component {
           </NavLink>
 
         </div>
-        <div id="mainselection" className="select_value">
-        <select>
-          <option value="dollar">$</option>
-          <option value="evro">€</option>
-          <option value="rub">₽</option>
-        </select>
-        </div>
-        <div className="search">
-          <input placeholder="Искать тур"></input>
-        </div>
+
+
+        {/*<div id="mainselection" className="select_value">*/}
+        {/*<select>*/}
+          {/*<option value="dollar">$</option>*/}
+          {/*<option value="evro">€</option>*/}
+          {/*<option value="rub">₽</option>*/}
+        {/*</select>*/}
+        {/*</div>*/}
+
+
+        {/*<div className="search">*/}
+          {/*<input placeholder="Искать тур"></input>*/}
+        {/*</div>*/}
+
+
         <NavLink className="tour_pick" to="/tour-pick">
-          <p>Купить</p>
+          Позвонить
         </NavLink>
       </div>
     </header>);

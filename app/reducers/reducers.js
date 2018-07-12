@@ -9,11 +9,39 @@ function tripReducer(state={}, action){
 
         // Clearing state on Location Change
         //case LOCATION_CHANGE:
-            //return Object.assign(state, {trip: {}});
+        //return Object.assign(state, {trip: {}});
 
 
         // Get trip success
         case 'GET_TRIP_FULFILLED':
+            return action.payload.data.data;
+
+
+        // Get trip failure
+        // case 'GET_TRIP_REJECTED':
+        //     return Object.assign(state, {
+        //         trip: {}
+        //     });
+
+        default:
+            return state;
+
+    }
+
+}
+function tripsReducer(state=[], action){
+
+
+    switch ( action.type ){
+
+
+        // Clearing state on Location Change
+        //case LOCATION_CHANGE:
+        //return Object.assign(state, {trip: {}});
+
+
+        // Get trip success
+        case 'GET_ALL_TRIPS_FULFILLED':
             return action.payload.data.data;
 
 
@@ -34,6 +62,7 @@ function tripReducer(state={}, action){
 
 const rootReducer = combineReducers({
     tripReducer: tripReducer,
+    tripsReducer: tripsReducer,
     routing: routerReducer
 });
 
