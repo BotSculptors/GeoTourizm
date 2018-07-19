@@ -69,7 +69,7 @@ export class Trip extends React.Component {
       </div>
 
       <div className="tabs_content">
-      
+
           <Tabs>
             <TabList>
               <Tab>
@@ -93,20 +93,7 @@ export class Trip extends React.Component {
             </TabPanel>
           </Tabs>
 
-          <div className="info_table">
-            <h3>МЕСТО НАХОЖДЕНИЯ :
-              <span>default</span>
-            </h3>
-            <h3>ПРОДОЛЖИТЕЛЬНОСТЬ :
-              <span>default</span>
-            </h3>
-            <h3>РАССТОЯНИЕ ОТ СТОЛИЦЫ :
-              <span>default</span>
-            </h3>
-            <h3>РАССТОЯНИЕ :
-              <span>default</span>
-            </h3>
-          </div>
+
 
 
         <div className="info-panel">
@@ -122,11 +109,32 @@ export class Trip extends React.Component {
         </div>
       </div>
 
+
+
+
+      <div className="info_table">
+        <div className="info_description">
+          <h3>Место нахождения :
+            <span> default</span>
+          </h3>
+          <h3>Продолжительность :
+            <span> default</span>
+          </h3>
+          <h3>Расстояние от столицы :
+            <span> default</span>
+          </h3>
+          <h3>Расстояние :
+            <span> default</span>
+          </h3>
+
+      </div>
+
       <div className="image_gallery">
 
         <ImageGallery items={images}/>
 
       </div>
+    </div>
 
       <div className="toor_lst">
 

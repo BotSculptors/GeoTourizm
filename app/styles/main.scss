@@ -57,7 +57,9 @@ html {
 $innerContainerWidth: 94.29%;
 $headerBackground: rgba(0, 0, 0, 0.96);
 $innerContainerMarginLeftOrRight: (100 - $innerContainerWidth) / 2;
-$Gray: #333333;
+$Gray: #323232;
+$Green: #418e7f;
+$Black: #000000;
 
 main{
 
@@ -215,7 +217,9 @@ header{
     display: none;
   }
 }
-
+header{
+  background-color: $Gray;
+}
 .titleSection{
   display: flex;
   justify-content: start;
@@ -254,7 +258,17 @@ header{
   align-items: center;
 }
 //info tour
-
+.info_description{
+  margin: 40px;
+  display: flex;
+  justify-content: space-around;
+  h3{
+    color: $Green;
+    span{
+      color: $Black
+    }
+  }
+}
 
 
 //Tabs
@@ -265,10 +279,12 @@ header{
 .react-tabs {
   outline:none;
   text-align: center;
-  width: 55%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  border: 1px solid #42a1f4;
+  border: 1px solid $Gray;
+  background-color: $Gray;
+  color: white;
   border-radius: 5px 5px 0 0;
   &__tab-list {
     border-bottom: 1px solid #fff;
@@ -286,22 +302,26 @@ header{
     list-style: none;
     padding: 6px 12px;
     cursor: pointer;
-    background-color: #42a1f4;
-    color: white;
+    background-color: white;
+    color: $Gray;
 
 
     &--selected {
-      background: #fff;
-      color: #42a1f4;
+      outline:none;
+      background: $Gray;
+      color: white;
       border-radius: 5px 5px 0 0;
     }
 
     &--disabled {
+      color: $Gray;
+      outline:none;
       cursor: default;
 
     }
 
     &:focus {
+      outline:none;
       box-shadow: 0 0 5px hsl(208, 99%, 50%);
       border-color: hsl(208, 99%, 50%);
       outline: none;
@@ -309,12 +329,14 @@ header{
       &:after {
 
         content: "";
+        outline:none;
         position: absolute;
         height: 5px;
         left: -4px;
         right: -4px;
         bottom: -5px;
         background: #fff;
+
       }
     }
   }
@@ -330,12 +352,14 @@ header{
 
 
 .bokmark{
+  margin-top: 10px;
+  margin-bottom: 20px;
   color: #fff;
-  font-size: 1.4em;
+  font-size: 1.1em;
   margin-top: 15px;
   width: 30%;
   height: 50px;
-  background-color:#42a1f4;
+  background-color:$Gray;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -348,7 +372,7 @@ header{
     justify-content: center;
     border-radius: 0px 30px 30px 0px;
 
-    border-right: 2px solid #438ac8;
+    border-right: 2px solid #696969;
   }
 }
 .bokmark_select{
@@ -360,6 +384,7 @@ header{
 }
 .bokmark_home{
   width: 20% !important;
+  background-color: $Gray;
 }
 .main_tour_pick{
 
@@ -372,7 +397,7 @@ header{
     height:90%;
   }
   div{
-    font-size: 1.5em;
+    font-size: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -384,7 +409,7 @@ header{
     display: none;
   }
   .bokmark{
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 @media screen and (max-width: 880px) {
@@ -392,7 +417,7 @@ header{
     justify-content: center;
   }
   .bokmark{
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   .navbar {
