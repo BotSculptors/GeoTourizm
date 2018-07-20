@@ -70,31 +70,28 @@ export class Trip extends React.Component {
 
       <div className="tabs_content">
 
-          <Tabs>
-            <TabList>
-              <Tab>
-                <h3>Описание Тура</h3>
-              </Tab>
+        <Tabs>
+          <TabList>
+            <Tab>
+              <h3>Описание Тура</h3>
+            </Tab>
 
-              <Tab>
-                <h3>Описание Маршрута</h3>
-              </Tab>
+            <Tab>
+              <h3>Описание Маршрута</h3>
+            </Tab>
 
-            </TabList>
-            <TabPanel>
+          </TabList>
+          <TabPanel>
 
-              <h3>{this.state.trip.meta_description}</h3>
+            <h3>{this.state.trip.meta_description}</h3>
 
-            </TabPanel>
-            <TabPanel>
+          </TabPanel>
+          <TabPanel>
 
-              <h3>{this.state.trip.directions}</h3>
+            <h3>{this.state.trip.directions}</h3>
 
-            </TabPanel>
-          </Tabs>
-
-
-
+          </TabPanel>
+        </Tabs>
 
         <div className="info-panel">
           <div className="map_content">
@@ -103,51 +100,75 @@ export class Trip extends React.Component {
           </div>
           <div className="weather_content">
             <h3>Погода :</h3>
-            <a target="_blank" href="http://nochi.com/weather/lagodekhi-137204"><img src="https://w.bookcdn.com/weather/picture/3_137204_1_20_333333_300_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=589&anc_id=26656" alt="booked.net"/></a>
+            <a target="_blank" href="http://nochi.com/weather/lagodekhi-137204"><img src="https://w.bookcdn.com/weather/picture/3_137204_1_20_dbd4db_300_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=589&anc_id=83481" alt="booked.net"/></a>
           </div>
 
         </div>
       </div>
 
-
-
-
       <div className="info_table">
         <div className="info_description">
-          <h3>Место нахождения :
-            <span> default</span>
-          </h3>
-          <h3>Продолжительность :
-            <span> default</span>
-          </h3>
-          <h3>Расстояние от столицы :
-            <span> default</span>
-          </h3>
-          <h3>Расстояние :
-            <span> default</span>
-          </h3>
+          <div>
+            <i className="material-icons infos-icon">
+              location_on
+            </i>
+            <h3>Место нахождения :
+              <span>
+                default</span>
+            </h3>
+          </div>
 
+          <div>
+            <i className="material-icons infos-icon">
+              access_time
+            </i>
+
+            <h3>Продолжительность :
+              <span>
+                default</span>
+            </h3>
+          </div>
+          <div>
+            <i className="material-icons infos-icon">
+              location_city
+            </i>
+            <h3>Расстояние от столицы :
+              <span>
+                default</span>
+            </h3>
+          </div>
+
+          <div>
+            <i className="material-icons infos-icon">
+              explore
+            </i>
+            <h3>Расстояние :
+              <span>
+                default</span>
+            </h3>
+          </div>
+
+        </div>
+
+        <div className="image_gallery">
+
+          <ImageGallery items={images}/>
+
+        </div>
       </div>
-
-      <div className="image_gallery">
-
-        <ImageGallery items={images}/>
-
-      </div>
-    </div>
 
       <div className="toor_lst">
 
         <h1>Другие туры в Грузию:</h1>
 
         <div className="main_tour_pick">
-          <div><img src={images[0].original}/>
+          <div className="first_tour-pick"><img src={images[0].original}/>
             <h3>default</h3>
           </div>
-          <div><img src={images[1].original}/>
+          <div className="second_tour-pick"><img src={images[1].original}/>
             <h3>default</h3>
           </div>
-          <div><img src={images[2].original}/>
+          <div className="last_tour-pick"><img src={images[2].original}/>
             <h3>default</h3>
           </div>
         </div>

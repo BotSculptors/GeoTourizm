@@ -3,44 +3,44 @@
   font-family: MainFontBold;
   src: url("../static/fonts/MainFontBold.ttf");
 }
-
 /* MainFontMedium */
 @font-face {
   font-family: MainFontMedium;
   src: url("../static/fonts/MainFontMedium.ttf");
 }
-
 /* MainFontSemibold */
 @font-face {
   font-family: MainFontSemibold;
   src: url("../static/fonts/MainFontSemibold.ttf");
 }
-
 /* MainFontText */
 @font-face {
   font-family: MainFontText;
   src: url("../static/fonts/MainFontText.ttf");
 }
-
 /* MainFontThin */
 @font-face {
   font-family: MainFontThin;
   src: url("../static/fonts/MainFontThin.ttf");
 }
-
 /* MainFontUltralight */
 @font-face {
   font-family: MainFontUltralight;
   src: url("../static/fonts/MainFontUltralight.ttf");
 }
 
-*{
+* {
   box-sizing: border-box;
   text-decoration: none;
   font-family: MainFontText;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: MainFontUltralight;
 }
 
@@ -49,58 +49,46 @@ html {
   margin: 0;
   overflow-x: hidden;
 }
-
-
 //======FOOTER====
-
-
 $innerContainerWidth: 94.29%;
 $headerBackground: rgba(0, 0, 0, 0.96);
 $innerContainerMarginLeftOrRight: (100 - $innerContainerWidth) / 2;
 $Gray: #323232;
 $Green: #418e7f;
 $Black: #000000;
+$TabColor: #F5F5F5;
 
-main{
-
-  .mainIn{
+main {
+  .mainIn {
     width: $innerContainerWidth;
     display: block;
     margin: 0 auto;
-
   }
 }
 
-footer{
+footer {
   border-top: 1px solid #e6e6e6;
   margin-top: 13px;
 
-  .footerIn{
+  .footerIn {
     width: $innerContainerWidth;
     height: 25px;
     display: block;
     margin: 0 auto;
-
   }
 }
-
-
-
-
 //====================
-
 body {
-  overflow:hidden;
+  overflow: hidden;
   padding: 0;
   margin: 0;
-
 }
 
 a {
   color: inherit;
 }
 
-header{
+header {
   background: $headerBackground;
 
   .headerIn {
@@ -111,13 +99,11 @@ header{
     justify-content: space-between;
     margin: 0 auto;
 
-
     * {
       display: flex;
     }
   }
 }
-
 
 .logo {
   justify-content: flex-end;
@@ -137,35 +123,36 @@ header{
     height: 30px;
   }
 }
+
 #mainselection select {
-   border: 0;
-   color: #EEE;
-   background: inherit;
-   font-size: 2em;
-   font-weight: bold;
-   padding: 2px 10px;
-   width: 100px;
-   *width: 100px;
-   *background-color: green;
-   -webkit-appearance: none;
+  border: 0;
+  color: #EEE;
+  background: inherit;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 2px 10px;
+  width: 100px;
+  *width: 100px;
+  *background-color: green;
+  -webkit-appearance: none;
 }
 
 #mainselection {
-   height: 30px;
-   overflow:hidden;
-   width:100px;
-   -moz-border-radius: 9px 9px 9px 9px;
-   -webkit-border-radius: 9px 9px 9px 9px;
-   border-radius: 9px 9px 9px 9px;
-   box-shadow: 1px 1px 11px green;
-   background: green url("../static/images/select_arrow.png") no-repeat scroll 59px center;
+  height: 30px;
+  overflow: hidden;
+  width: 100px;
+  -moz-border-radius: 9px 9px 9px 9px;
+  -webkit-border-radius: 9px 9px 9px 9px;
+  border-radius: 9px 9px 9px 9px;
+  box-shadow: 1px 1px 11px green;
+  background: green url("../static/images/select_arrow.png") no-repeat scroll 59px center;
 }
-
 
 .search {
   align-items: center;
   position: relative;
   color: #aaa;
+
   img {
     height: 20px;
     position: absolute;
@@ -184,6 +171,7 @@ header{
     font-size: 18px;
   }
 }
+
 .tour_pick {
   font-size: 1.2em;
   justify-content: center;
@@ -191,9 +179,11 @@ header{
   background-color: green;
   height: 40px;
   width: 180px;
-  img{
+
+  img {
     width: 30px;
   }
+
   p {
     color: white;
     font-size: 16px;
@@ -217,126 +207,134 @@ header{
     display: none;
   }
 }
-header{
+
+header {
   background-color: $Gray;
 }
-.titleSection{
+
+.titleSection {
   display: flex;
   justify-content: start;
   align-items: center;
 }
-
 //maps
-
-.map{
+.map {
   border: 2px solid $Gray;
-  width:  300px;
+  width: 300px;
   height: 300px;
 }
-.map_content h3{
+
+.map_content h3 {
   margin-bottom: 6px;
 }
-.weather_content{
+
+.weather_content {
   margin-top: 30px;
 }
-.weather_content h3{
+
+.weather_content h3 {
   margin-bottom: 6px;
 }
-.weather_content img{
-  border: 3px solid $Gray;
-  border-radius: 25px 25px 25px 25px;
-}
-
 //ImageGallery
-
-.image-gallery{
-  width: 70%;
+.image-gallery {
+  width: 100%;
 }
-.image_gallery{
+
+.image_gallery {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+.image-gallery-thumbnail{
+  width: 20%;
+}
+
 //info tour
-.info_description{
-  margin: 40px;
+
+.info_description {
+  margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
-  justify-content: space-around;
-  h3{
+  justify-content: space-between;
+
+  .infos-icon {
+    margin-right: 2px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h3 {
     color: $Green;
-    span{
-      color: $Black
+
+    span {
+      color: $Black;
     }
   }
 }
-
-
 //Tabs
-.tabs_content{
+
+.tabs_content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
+
 .react-tabs {
-  outline:none;
+  outline: none;
   text-align: center;
   width: 50%;
   display: flex;
   flex-direction: column;
-  border: 1px solid $Gray;
-  background-color: $Gray;
-  color: white;
-  border-radius: 5px 5px 0 0;
+  background-color: $TabColor;
+  color: $Black;
+
   &__tab-list {
-    border-bottom: 1px solid #fff;
     margin: 0 0 10px;
     padding: 0;
   }
 
   &__tab {
-    outline:none;
+    outline: none;
     width: 50%;
     display: inline-block;
     border-bottom: none;
-    bottom: -1px;
     position: relative;
     list-style: none;
     padding: 6px 12px;
     cursor: pointer;
     background-color: white;
-    color: $Gray;
-
+    color: $Black;
 
     &--selected {
-      outline:none;
-      background: $Gray;
-      color: white;
-      border-radius: 5px 5px 0 0;
+      outline: none;
+      background-color: $TabColor;
+      color: $Black;
     }
 
     &--disabled {
-      color: $Gray;
-      outline:none;
+      color: $Black;
+      outline: none;
       cursor: default;
-
     }
 
     &:focus {
-      outline:none;
+      outline: none;
       box-shadow: 0 0 5px hsl(208, 99%, 50%);
       border-color: hsl(208, 99%, 50%);
       outline: none;
 
       &:after {
-
         content: "";
-        outline:none;
+        outline: none;
         position: absolute;
         height: 5px;
         left: -4px;
         right: -4px;
         bottom: -5px;
         background: #fff;
-
       }
     }
   }
@@ -350,8 +348,7 @@ header{
   }
 }
 
-
-.bokmark{
+.bokmark {
   margin-top: 10px;
   margin-bottom: 20px;
   color: #fff;
@@ -359,56 +356,67 @@ header{
   margin-top: 15px;
   width: 30%;
   height: 50px;
-  background-color:$Gray;
+  background-color: $Gray;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 0px 25px 25px 0px;
-  a{
+  border-radius: 0 25px 25px 0;
+
+  a {
     align-items: center;
     height: 100%;
     width: 30%;
     display: flex;
     justify-content: center;
-    border-radius: 0px 30px 30px 0px;
-
+    border-radius: 0 30px 30px 0;
     border-right: 2px solid #696969;
   }
 }
-.bokmark_select{
+
+.bokmark_select {
   width: 50%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.bokmark_home{
+
+.bokmark_home {
   width: 20% !important;
   background-color: $Gray;
 }
-.main_tour_pick{
 
-  margin: 50px;
+
+//tour list
+
+.main_tour_pick {
+  margin-top: 20px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  img{
-    width: 90%;
-    height:90%;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
   }
-  div{
+  .last_tour-pick{
+    margin: 0;
+  }
+
+  div {
+    margin-right: 20px;
     font-size: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
 }
 @media screen and (max-width: 1100px) {
   .tour_pick {
     display: none;
   }
-  .bokmark{
+
+  .bokmark {
     font-size: 1em;
   }
 }
@@ -416,7 +424,8 @@ header{
   .name {
     justify-content: center;
   }
-  .bokmark{
+
+  .bokmark {
     font-size: 0.8em;
   }
 
@@ -434,14 +443,16 @@ header{
   .select_value {
     margin-bottom: 10px;
   }
+
   #mainselection select {
     font-size: 1.5em;
   }
 }
 @media screen and (max-width: 400px) {
-  .bokmark{
+  .bokmark {
     font-size: 0.7em;
   }
+
   .navbar {
     font-size: 0.5em;
   }
