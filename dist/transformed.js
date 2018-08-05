@@ -28533,6 +28533,40 @@ var Header = exports.Header = function (_React$Component) {
           ),
           _react2.default.createElement(
             'div',
+            { className: 'container' },
+            _react2.default.createElement('input', { id: 'toggle', type: 'checkbox' }),
+            _react2.default.createElement(
+              'label',
+              { className: 'toggle-container', htmlFor: 'toggle' },
+              _react2.default.createElement('span', { className: 'button button-toggle' })
+            ),
+            _react2.default.createElement(
+              'nav',
+              { className: 'nav' },
+              _react2.default.createElement(
+                'a',
+                { className: 'nav-item', href: '' },
+                '\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435'
+              ),
+              _react2.default.createElement(
+                'a',
+                { className: 'nav-item', href: '' },
+                '\u0418\u0441\u0442\u043E\u0440\u0438\u044F'
+              ),
+              _react2.default.createElement(
+                'a',
+                { className: 'nav-item', href: '' },
+                '\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430'
+              ),
+              _react2.default.createElement(
+                'a',
+                { className: 'nav-item', href: '' },
+                '\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
             { className: 'navigation' },
             _react2.default.createElement(
               _reactRouterDom.NavLink,

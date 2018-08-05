@@ -27,6 +27,36 @@ export class Header extends React.Component {
             <img src={logo} alt="Geo Tourizm Logo"/>
         </NavLink>
 
+  <div className="wrapper">
+    <input type="checkbox" id="check-menu" />
+    <NavLink className="hamburger_logo" to="/">
+        <img src={logo} alt="Geo Tourizm Logo"/>
+    </NavLink>
+
+    <label htmlFor="check-menu"></label>
+
+   <div className="burger-line fi-burger"></div>
+    <div className="burger-line se-burger"></div>
+    <div className="burger-line th-burger"></div>
+    <div className="burger-line fo-burger"></div>
+    <nav className="main-burger_menu">
+    <NavLink className="blog" to="/trips">
+      Туры
+    </NavLink>
+    <NavLink className="otzivi" to="/reviews">
+      Отзывы
+    </NavLink>
+
+    <NavLink className="oproekte" to="/about">
+                О проекте
+    </NavLink>
+    <NavLink className="hambruger_pick" to="/tour-pick">
+                Позвонить
+    </NavLink>
+    </nav>
+
+        </div>
+
         <div className="navigation">
 
           <NavLink className="blog" to="/trips">
