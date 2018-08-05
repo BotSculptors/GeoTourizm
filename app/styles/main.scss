@@ -299,24 +299,27 @@ header {
   outline: none;
   text-align: center;
   width: 50%;
+
   display: flex;
   flex-direction: column;
   background-color: $TabColor;
   color: $Black;
 
   &__tab-list {
-    margin: 0 0 10px;
+    margin: 0;
     padding: 0;
+
+    background-color: white;
   }
 
   &__tab {
+    height: 100%;
     outline: none;
     width: 50%;
     display: inline-block;
     border-bottom: none;
     position: relative;
     list-style: none;
-    padding: 6px 12px;
     cursor: pointer;
     background-color: white;
     color: $Black;
@@ -436,6 +439,7 @@ header {
 
   .react-tabs {
     width: 100%;
+
   }
 
   .titleSection {
@@ -462,11 +466,18 @@ header {
   .titleSection {
     font-size: 0.7em;
   }
+  .react-tabs {
+    font-size: 0.75em
+
+  }
 
   .bokmark {
     height: 40px;
     width: 50%;
     font-size: 0.6em;
+    img{
+      width: 20px;
+    }
   }
 
   .info_description {
@@ -501,6 +512,21 @@ header {
 @media screen and (max-width: 300px) {
   .main-burger_menu {
     font-size: 0.8em !important;
+  }
+  .react-tabs {
+    font-size: 0.65em
+  }
+  .hamburger_logo{
+    width: 30px;
+  }
+
+  .bokmark {
+    height: 40px;
+    width: 60%;
+    font-size: 0.5em;
+    img{
+      width: 18px;
+    }
   }
 }
 //burger MENU
