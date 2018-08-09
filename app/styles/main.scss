@@ -57,6 +57,7 @@ $Gray: #323232;
 $Green: #418e7f;
 $Black: #000000;
 $TabColor: #F5F5F5;
+$smokingwhite:#f7f7f7;
 
 main {
   .mainIn {
@@ -1050,4 +1051,51 @@ $ig-transparent: rgba(0, 0, 0, 0) !default;
     font-size: 0.8em;
     padding: 5px 10px;
   }
+}
+
+
+//Trips main
+.Trips{
+  display: grid;
+  grid-gap: 50px 100px;
+  grid-template-columns: repeat(3 , minmax(300px, 1fr)) ;
+
+  .gridBlockOfTrip{
+    background-color: $smokingwhite;
+    display: grid;
+    img{
+      width: 100%;
+      padding-bottom: 5px;
+    }
+  }
+}
+.trips_info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  .location_trip{
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .title_trip{
+    font-size: 1em;
+  }
+}
+.data_trip{
+  display: flex;
+  justify-content: space-between;
+  *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.derections_trip{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 10px;
 }
