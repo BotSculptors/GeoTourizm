@@ -67,7 +67,7 @@ export class Trips extends React.Component {
               </div>
               <div className="trips_info">
                 <div className="location_trip">
-                  <i class="material-icons">
+                  <i className="material-icons">
                     location_on
                   </i>
                   <span>Кахетия.Лагодехи</span>
@@ -85,7 +85,7 @@ export class Trips extends React.Component {
               </div>
               <div className="data_trip">
                 <div className="price_trip">
-                  <i class="material-icons">
+                  <i className="material-icons">
                     attach_money
                   </i>
                   <span>Price</span>
@@ -93,7 +93,7 @@ export class Trips extends React.Component {
 
                 <div className="time_trip">
 
-                  <i class="material-icons">
+                  <i className="material-icons">
                     access_time
                   </i>
                   <span>Time
@@ -101,7 +101,7 @@ export class Trips extends React.Component {
                 </div>
 
                 <div className="type_trip">
-                  <i class="material-icons">
+                  <i className="material-icons">
                     public
                   </i>
                   <span>Type</span>
