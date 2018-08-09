@@ -26,12 +26,10 @@ export class Header extends React.Component {
         <NavLink className="logo" to="/">
             <img src={logo} alt="Geo Tourizm Logo"/>
         </NavLink>
-
+    
   <div className="wrapper">
     <input type="checkbox" id="check-menu" />
-    <NavLink className="hamburger_logo" to="/">
-        <img src={logo} alt="Geo Tourizm Logo"/>
-    </NavLink>
+
 
     <label htmlFor="check-menu"></label>
 

@@ -33,6 +33,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: MainFontText;
+
 }
 
 h1,
@@ -49,6 +50,7 @@ html {
   margin: 0;
   overflow-x: hidden;
 }
+
 //======FOOTER====
 $innerContainerWidth: 94.29%;
 $headerBackground: rgba(0, 0, 0, 0.96);
@@ -107,17 +109,10 @@ header {
   }
 }
 
-.logo {
-  justify-content: flex-end;
-}
 
-.hamburger_logo {
+.logo {
   width: 20% !important;
   height: 50px;
-
-  img {
-    margin-bottom: 7px;
-  }
 }
 
 .navigation {
@@ -504,20 +499,13 @@ header {
   div.wrapper {
     display: block !important;
   }
-
-  .logo {
-    display: none !important;
-  }
 }
 //300px
 @media screen and (max-width: 300px) {
-  .main-burger_menu {
-    font-size: 0.8em !important;
-  }
   .react-tabs {
     font-size: 0.7em
   }
-  .hamburger_logo{
+  .logo{
     width: 30px;
   }
 
@@ -534,10 +522,11 @@ header {
 
 div.wrapper {
   display: none;
+  width: 60px;
+
 }
 
 .wrapper {
-  width: 100%;
   background-color: inherit;
   position: relative;
   color: inherit;
@@ -572,7 +561,9 @@ div.wrapper {
 }
 
 #check-menu:checked ~ .main-burger_menu {
-  max-height: 800px;
+  width: 100px;
+  height: 116px;
+  max-height: 300px;
   font-size: 1em;
 }
 
